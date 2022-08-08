@@ -1,0 +1,14 @@
+var removeElement = function(nums, val) {
+    let pointer = 0 //this is a pointer and will keep track of how many were modified and move along the index
+    
+    let numsLength = nums.length
+    
+    for (let i = 0 ; i < numsLength; i++) {
+        if (nums[i] !== val) {  //if it isn't the val then we want to move it to the front
+            nums[pointer] = nums[i]
+            pointer++
+        }
+    }
+    
+    return pointer
+};

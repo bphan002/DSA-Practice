@@ -1,0 +1,23 @@
+var searchInsert = function(nums, target) {
+ 
+    let left = 0 
+    let right = nums.length-1
+
+    while (left <= right) {  
+        let middle = Math.floor((left + right)/2)  //if you don't do math.floor it'll be a decimal and get confused
+        let middleValue = nums[middle] 
+      
+        middleValue = nums[middle]
+        if (middleValue === target) {
+            return middle
+        } else if ( middleValue > target) { 
+            right = middle - 1  
+        } else { // so this will be on the right side
+    
+            left = middle + 1  //1
+
+        }
+    }
+    return left  // when it exits the while loop 
+
+};
