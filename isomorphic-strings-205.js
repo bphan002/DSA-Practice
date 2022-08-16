@@ -4,6 +4,10 @@
 //of course when you reconstruct it will have the same value so it saves an extra iteration step
 //this is o(n) and o(1) for space and time since it is dependent on the length of the strings
 
+
+//strategy 
+// if you make a hash map and both of them only point to one char then it works
+//else you know it doens't work
 /**
  * @param {string} s
  * @param {string} t
