@@ -1,0 +1,22 @@
+function rotate90clockwise(arr) {
+    let newMatrix = []
+
+    for (let i = 0; i < arr.length; i++) {
+        for let subArray = []
+        for (let j = 0; j < arr.length; j++) {
+            subArray.push(arr[j][arr.length-i-1) 
+        }
+        newMatrix.push(subArray)
+    }
+
+    return newMatrix
+}
+
+
+const arr1= [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+console.log(rotate90clockwise(arr1))
