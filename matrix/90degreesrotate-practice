@@ -2,16 +2,26 @@ function rotate90clockwise(arr) {
     let newMatrix = []
 
     for (let i = 0; i < arr.length; i++) {
-        for let subArray = []
+        let subArray = []
         for (let j = 0; j < arr.length; j++) {
-            subArray.push(arr[j][arr.length-i-1) 
+            subArray.push(arr[arr.length-1-j][i]) 
         }
         newMatrix.push(subArray)
+        console.log(subArray)
     }
 
     return newMatrix
 }
 
+//to inverse the row  it'll be arr[i][arr.length-j-1]
+//to inverse the column it'll be arr[arr.length-i-1][j]
+//to rotate 90 degrees counterclockwise it'll be arr[j][arr.length-1-j]
+//to rotate 90 degrees clockwise it'll be arr[arr.length-1-j][i])  
+//to transpose it'll be arr[j][i]
+
+
+//if you get stuck an easy way to do is is just draw out an example of a 3x3 array and then see how the coords
+//switch over.  It is either the (i,j)(row,column) stay the same or arr.length-1-i  or arr.length-1-j
 
 const arr1= [
     [1,2,3],
