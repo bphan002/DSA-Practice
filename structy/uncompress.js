@@ -1,21 +1,24 @@
-let pointer1 = 0
-let pointer2 = 0
-let uncompress = '' //cc
-
-let i = 0
-while (i < s.length) {
-  let pointer2 = s[i]
-  if (!nums.includes(pointer2)) {
-      let times = parseInt(s.slice(pointer1,i))
-      let j = 0
-      while (j < times) {  //1 < 2
-        uncompress += pointer2
-        j++
+const uncompress = (s) => {
+    let result = [];
+    const numbers = '0123456789';
+    let i = 0;
+    let j = 0;
+    while (j < s.length) {
+      if (numbers.includes(s[j])) {
+        j += 1;
+      } else {
+        const num = Number(s.slice(i, j));
+        for (let count = 0; count < num; count += 1) {
+          result.push(s[j]);
+        }
+        j += 1;
+        i = j;
       }
-  i++
-  pointer1 = i
-  }
-i++
-}
-  return uncompress
-}
+    }
+    return result.join('');
+  };
+
+  //n = number of groups
+//m = max num found in any group
+//Time: O(n*m)
+//Space: O(n*m)
